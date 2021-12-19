@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.content pre{  
+    margin: 0!important;
+}
+.theme-default-content:not(.custom){
+    max-width: 1000px !important;
+}
+pre{
+    background:#444!important;
+}
+
+
+blockquote
+  font-size 1rem
+  color #999;
+  border-left none
+  margin 0
+  padding 0
+
+  & > p
+    margin 0
+
+ul, ol
+  padding-left 0
+
+strong
+  font-weight 600
+
+h1, h2, h3, h4, h5, h6
+  font-weight 600
+  line-height 1.25
+
+h1
+  font-size 1.6rem
+
+h2
+  font-size 1.4rem
+  padding-bottom 1rem
+
+h3
+  font-size 1.2rem
+
+a.header-anchor
+  font-size 0.85em
+  float left
+  margin-left -0.87em
+  padding-right 0.23em
+  margin-top 0.125em
+  opacity 0
+
+  &:focus,
+  &:hover
+    text-decoration none
+ 
+p, ul, ol
+  line-height 1.7
+
+hr
+  border 0
+  border-top 1px solid $borderColor
+
+.code-block table{
+    border-collapse separate
+    display: table;
+    overflow-x: initial
+    margin: 0;
+    th,td{
+        border: 0;
+        padding: 0;
+    }
+    tr{
+        border-top: none;
+        &:nth-child(2n){
+            background: none;
+        }
+    }
+}
+
+{$contentClass}:not(.custom) > &
+    margin-top (0.5rem - $navbarHeight)
+    padding-top ($navbarHeight + 1rem)
+    margin-bottom 0
+    &:first-child
+      margin-top -1.5rem
+      margin-bottom 1rem
+      + p, + pre, + .custom-block
+        margin-top 1rem!important
+:not(.code-block) {
+  p {
+    margin: 1rem
+  }
+}

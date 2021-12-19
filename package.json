@@ -6,10 +6,16 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "karma start",
+    "lib": "vue-cli-service build --target lib --name mc-ui  ./src/packages/index.ts",
+    "doc": "vuepress dev docs",
+    "build:doc": "vuepress build docs"
   },
   "dependencies": {
+    "async-validator": "^1.11.5",
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.6",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -19,6 +25,7 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "^1.0.3",
+    "@vuepress/utils": "^2.0.0-alpha.1",
     "babel-eslint": "^10.1.0",
     "chai": "^4.1.2",
     "eslint": "^6.7.2",
@@ -30,7 +37,8 @@
     "lint-staged": "^9.5.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.8.2"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
