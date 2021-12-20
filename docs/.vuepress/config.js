@@ -19,9 +19,12 @@ module.exports = {
       {
         title: "组件",
         collapsable: true,
-        children: ["/components/mc-nested-table"],
-      },
-    ],
+        children: [
+          "/components/mc-nested-table",
+          "/components/mc-query-form"
+        ]
+      }
+    ]
   },
   // plugins: [
   //   [

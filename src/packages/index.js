@@ -1,33 +1,48 @@
-// import Button from './Button.vue'
-// import Icon from './Icon.vue'
-// import ButtonGroup from './ButtonGroup.vue'
-// const install = (Vue) => {
-//   // 把所有的组件设成全局组件
-//   // Vue.component(Button.name,Button)
-//   // Vue.component(Icon.name,Icon)
-//   // Vue.component(ButtonGroup.name,ButtonGroup)
-//   // require.context()
-//   const requireComponent = require.context('.', true, /\.vue/)
-//   requireComponent.keys().forEach(fileName => {
-//     const config = requireComponent(fileName)
-//     // console.log(config);
-//     Vue.component(config.default.name, config.default)
-//   })
-// }
-// // script  vue是放在window下， 放在模块内
-// if (typeof window.vue !== 'undefined') {
-//   install(window.vue)
-// }
-// export default {
-//   install
-// }
-
+import MButton from './button/index'
+import MRow from './row/index'
+import MCol from './col/index'
+import MTag from './tag/index'
+import MShowMore from './show-more/index'
+import MLimitTextArea from './limit-textarea/index'
+import MetaInfo from './meta-info/index'
+import MAlert from './alert/index'
+import MLoadingBar from './loading-bar/index'
+import Skeleton from './skeleton/index'
+import McTable, { McTableTsx } from './mc-table/index'
+import McMemorySelector from './mc-memory-selector/index'
+import McDateRangePicker from './mc-date-range-picker/index'
+import McImgPreview from './mc-img-preview/index'
+import McMultipleInput from './mc-multiple-input/index'
 import McQueryForm from './mc-query-form/index'
 import McNestedTable from './mc-nested-table/index'
+import Create from '../utils/create'
+import compress from '../utils/compress'
+import McDraggableUpload from './mc-draggable-upload/index'
+import McSvgIcon from './mc-svg-icon/index'
+import McRightNavigationBar from './mc-right-navigation-bar/index'
+import McQueryShrink from './mc-query-shrink/index'
+import tableScrollTop from '../utils/tableScrollTop'
 
 const components = {
+  MButton,
+  MRow,
+  MCol,
+  MTag,
+  MShowMore,
+  MLimitTextArea,
+  MAlert,
+  Skeleton,
+  McTable,
+  McTableTsx,
+  McMemorySelector,
+  McDateRangePicker,
+  McMultipleInput,
   McQueryForm,
-  McNestedTable
+  McNestedTable,
+  McDraggableUpload,
+  McSvgIcon,
+  McRightNavigationBar,
+  McQueryShrink
 }
 
 const install = function (Vue) {
@@ -35,11 +50,19 @@ const install = function (Vue) {
   for (const key in components) {
     Vue.component(components[key].name, components[key])
   }
-  // MetaInfo.install(Vue)
-  // Vue.prototype.$loading = MLoadingBar
-  // Vue.prototype.$create = Create
-  // Vue.prototype.$tableScrollTop = tableScrollTop
-  // Vue.use(McImgPreview)
+
+  // const requireComponent = require.context('.', true, /index\.vue/)
+  // requireComponent.keys().forEach((fileName) => {
+  //   const config = requireComponent(fileName)
+  //   console.log(config.default.name, 'wsss')
+  //   Vue.component(config.default.name, config.default)
+  // })
+
+  MetaInfo.install(Vue)
+  Vue.prototype.$loading = MLoadingBar
+  Vue.prototype.$create = Create
+  Vue.prototype.$tableScrollTop = tableScrollTop
+  Vue.use(McImgPreview)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -48,14 +71,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  // compress,
-  // tableScrollTop,
+  compress,
+  tableScrollTop,
   ...components
 }
-
-// const requireComponent = require.context('.', true, /\.vue/)
-// requireComponent.keys().forEach((fileName) => {
-//   const config = requireComponent(fileName)
-//   console.log(config, 'wsss')
-//   // Vue.component(config.default.name, config.default)
-// })

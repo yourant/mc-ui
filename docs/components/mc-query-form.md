@@ -1,30 +1,3 @@
-<style>
-
-</style>
-<script>
- export default {
-   data() {
-      return {
-         formData:{
-         name:"张三",
-         age:"30",
-         sex:"男",
-         phone:"135703434",
-         qq:"44362233"
-       }
-      }
-    },
-    methods: {
-      search() {
-         console.log("请求接口")
-      },
-      reset(){
-        this.formData = {}
-      }
-    }
-  }
-</script>
-
 # MqueryForm 搜索条件表单
 
 ---
@@ -34,6 +7,32 @@
 ### 基本用法
 
 直接用 mc-query-form 标签包裹搜索条件，经常用到的条件放到 mc-query-form 标签下面，不经常用到的条件放到插槽 slot="senior" 下面，组件两个事件分别是 reset：重置事件，search：搜索事件
+
+<demo-block>
+::: slot source
+<script>
+export default {
+  data() {
+      return {
+        formData:{
+        name:"张三",
+        age:"30",
+        sex:"男",
+        phone:"135703434",
+        qq:"44362233"
+      }
+      }
+    },
+    methods: {
+      search() {
+        console.log("请求接口")
+      },
+      reset(){
+        this.formData = {}
+      }
+    }
+  }
+</script>
 
 <div class="demo-block">
   <mc-query-form @reset="reset" @search="search" :model="formData" label-width="100px">
@@ -103,9 +102,9 @@
     </el-row>
   </mc-query-form>
 </div>
+:::
 
-::: demo
-
+::: slot highlight
 ```html
 <template>
   <mc-query-form @reset="reset" @search="search" :model="formData" label-width="100px">
@@ -195,8 +194,10 @@
   };
 </script>
 ```
-
 :::
+
+</demo-block>
+
 
 ### Attributes
 
