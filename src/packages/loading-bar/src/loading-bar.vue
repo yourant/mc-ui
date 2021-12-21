@@ -15,23 +15,23 @@
 </template>
 
 <script>
-  export default{
-    name: 'MLoadingBar',
-    props: {
-      type: {
-        type: Number,
-        default: 1
-      }
-    },
-    data () {
-      return {
-        speed: 5,
-        easing: 'linear',
-        percentNum: 0,
-        totalProgress: 0,
-        showSpinner: true,
-        isError: false
-      }
+export default {
+  name: 'MLoadingBar',
+  props: {
+    type: {
+      type: Number,
+      default: 1
+    }
+  },
+  data () {
+    return {
+      speed: 5,
+      easing: 'linear',
+      percentNum: 0,
+      totalProgress: 0,
+      showSpinner: true,
+      isError: false
     }
   }
+}
 </script>

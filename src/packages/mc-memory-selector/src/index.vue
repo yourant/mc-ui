@@ -35,12 +35,12 @@ export default {
       default: 30
     }
   },
-  data() {
+  data () {
     return {
       options: []
     }
   },
-  mounted() {
+  mounted () {
     if (!this.storageKey) {
       throw new Error('mc-memory-selector组件必须要传入storage-key属性')
     }
@@ -50,7 +50,7 @@ export default {
     }
   },
   methods: {
-    changeHandle(e) {
+    changeHandle (e) {
       if (Array.isArray(e)) {
         const options = e
         this.options = [...new Set([...options.filter(item => !!item), ...this.options])].filter(item => !!item).slice(0, this.maxMemoryCount)

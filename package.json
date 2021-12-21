@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "test": "karma start",
-    "lib": "vue-cli-service build --target lib --name mc-ui  ./src/packages/index.ts",
+    "lib": "vue-cli-service build --target lib --name mc-ui  ./src/packages/index.js",
     "doc": "vuepress dev docs",
     "build:doc": "vuepress build docs"
   },

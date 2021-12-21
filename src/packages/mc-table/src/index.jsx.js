@@ -60,12 +60,12 @@ export default {
     renderColumn (columns) {
       return columns.map((item, index) => (
         !item.children ? <el-table-column
-            key={index}
-            {...this.transParams(item)}
-          /> : <el-table-column
-            key={index}
-            {...this.transParams(item)}
-          >{this.renderColumn(item.children)}</el-table-column>
+          key={index}
+          {...this.transParams(item)}
+        /> : <el-table-column
+          key={index}
+          {...this.transParams(item)}
+        >{this.renderColumn(item.children)}</el-table-column>
       ))
     }
   },

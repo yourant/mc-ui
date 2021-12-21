@@ -2,11 +2,11 @@
 import Vue from 'vue'
 import LoadingBar from './src/loading-bar.vue'
 
-let LoadingBarConstructor = Vue.extend(LoadingBar)
+const LoadingBarConstructor = Vue.extend(LoadingBar)
 
-let timer = null, removeTimer = null
+let timer = null; let removeTimer = null
 
-let WLoadingBar = () => {
+const WLoadingBar = () => {
   return new LoadingBarConstructor()
 }
 LoadingBarConstructor.prototype.config = function (options) {

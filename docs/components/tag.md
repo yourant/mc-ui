@@ -1,9 +1,3 @@
-<style>
-  .m__tag{
-    margin-right: 10px;
-  }
-</style>
-
 # Tag 标签
 
 ---
@@ -12,6 +6,13 @@
 
 由`type`属性来选择 tag 的类型，也可以通过`color`属性来自定义背景色。
 
+<style>
+  .m__tag{
+    margin-right: 10px;
+  }
+</style>
+<demo-block>
+::: slot source
 <div class="demo-block">
   <m-tag>标签一</m-tag>
   <m-tag color="success">标签二</m-tag>
@@ -19,8 +20,9 @@
   <m-tag color="warning">标签四</m-tag>
   <m-tag color="danger">标签五</m-tag>
 </div>
+:::
 
-::: demo
+::: slot highlight
 
 ```html
 <m-tag>标签一</m-tag>
@@ -29,14 +31,57 @@
 <m-tag color="warning">标签四</m-tag>
 <m-tag color="danger">标签五</m-tag>
 ```
-
 :::
+</demo-block>
 
 ### 可移除标签
 
 设置`closable`属性可以定义一个标签是否可移除。默认的标签移除时会附带渐变动画，它接受一个 Boolean，true 为关闭
 
+
+<demo-block>
+::: slot source
 <div class="demo-block">
+  <m-tag
+    :key="tag"
+    v-for="tag in dynamicTags"
+    closable
+    :disable-transitions="false"
+    @close="handleClose(tag)" :color="tag.color">
+    {{tag.name}}
+  </m-tag>
+
+  <script>
+    export default {
+      data() {
+        return {
+          dynamicTags: [{
+            name: '标签一',
+            color: 'primary' 
+          }, {
+            name: '标签二',
+            color: 'success' 
+          }, {
+            name: '标签三',
+            color: 'info'           
+          }, {
+              name: '标签四',
+              color: 'danger'
+          }]
+        };
+      },
+      methods: {
+        handleClose(tag) {
+          this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1);
+        }
+      }
+    }
+  </script>
+</div>
+:::
+
+::: slot highlight
+```html
 <m-tag
   :key="tag"
   v-for="tag in dynamicTags"
@@ -46,18 +91,18 @@
   {{tag.name}}
 </m-tag>
 <script>
-export default {
+  export default {
     data() {
       return {
         dynamicTags: [{
-           name: '标签一',
-           color: 'primary' 
+          name: '标签一',
+          color: 'primary' 
         }, {
-           name: '标签二',
-           color: 'success' 
+          name: '标签二',
+          color: 'success' 
         }, {
-           name: '标签三',
-           color: 'info'           
+          name: '标签三',
+          color: 'info'           
         }, {
             name: '标签四',
             color: 'danger'
@@ -71,55 +116,11 @@ export default {
     }
   }
 </script>
-</div>
-
-::: demo
-
-```html
-<m-tag
-  :key="tag"
-  v-for="tag in dynamicTags"
-  closable
-  :disable-transitions="false"
-  @close="handleClose(tag)"
-  :color="tag.color"
->
-  {{tag.name}}
-</m-tag>
-<script>
-  export default {
-    data() {
-      return {
-        dynamicTags: [
-          {
-            name: "标签一",
-            color: "primary"
-          },
-          {
-            name: "标签二",
-            color: "success"
-          },
-          {
-            name: "标签三",
-            color: "info"
-          },
-          {
-            name: "标签四",
-            color: "danger"
-          }
-        ]
-      };
-    },
-    methods: {
-      handleClose(tag) {
-        this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1);
-      }
-    }
-  };
-</script>
 ```
-
 :::
+</demo-block>
+
+
 
 ## API
 

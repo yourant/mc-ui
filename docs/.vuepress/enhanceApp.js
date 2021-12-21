@@ -14,13 +14,12 @@ import "element-ui/lib/theme-chalk/index.css";
 //   })
 // })
 
-import McQueryForm from "../../src/packages/mc-query-form";
-import McNestedTable from "../../src/packages/mc-nested-table";
+import mcui from "../../src/packages/index";
+import "../../src/packages/theme-default/lib/index.css";
 
 export default ({ Vue }) => {
   Vue.use(ElementUI, {
     size: "small",
   });
-  Vue.use(McQueryForm);
-  Vue.use(McNestedTable);
+  Vue.use(mcui);
 };

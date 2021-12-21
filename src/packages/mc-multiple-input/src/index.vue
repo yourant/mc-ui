@@ -23,16 +23,16 @@ export default {
       default: () => []
     }
   },
-  mounted() {
+  mounted () {
     const inputRef = this.$refs.select.$refs.input
     inputRef && inputRef.addEventListener('blur', this.selectBlurHandle, false)
   },
-  beforeDestroy() {
+  beforeDestroy () {
     const inputRef = this.$refs.select.$refs.input
     inputRef.removeEventListener('blur', this.selectBlurHandle, false)
   },
   methods: {
-    selectBlurHandle(e) {
+    selectBlurHandle (e) {
       if (e.target.value) {
         const arr = [...(this.value || [])]
         arr.push(e.target.value)

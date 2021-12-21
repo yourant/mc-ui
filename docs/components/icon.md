@@ -1,6 +1,15 @@
-<script>
-  var iconList = require('../icon.json');
+# Icon 图标
 
+---
+
+语义化的矢量图形，`MC-UI` 使用开源的 Iconfont (阿里妈妈 MUX 倾力打造的矢量图标管理、交流平台) 作为图标库，并制作成了 `icon font`。
+
+### 如何使用
+
+使用 `class="icon"` 来声明图标，具体图标的名称请 `copy` 相应的标签
+
+<script>
+  const iconList = require('../icon.json');
   export default {
     data() {
       return {
@@ -9,7 +18,8 @@
     }
   }
 </script>
-<style lang="less">
+
+<style lang="scss">
   .demo-icon .source > i {
     font-size: 24px;
     color: #8492a6;
@@ -17,11 +27,9 @@
     font-size: 1.5em;
     vertical-align: middle;
   }
-  
   .demo-icon .source > button {
     margin: 0 20px;
   }
-
   .icon-list {
     overflow: hidden;
     list-style: none;
@@ -38,7 +46,6 @@
     color: #666;
     font-size: 13px;
     transition: color .15s linear;
-
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
     margin-right: -1px;
@@ -62,33 +69,25 @@
   }
 </style>
 
-# Icon 图标
-
----
-
-语义化的矢量图形，`MC-UI` 使用开源的 Iconfont (阿里妈妈 MUX 倾力打造的矢量图标管理、交流平台) 作为图标库，并制作成了 `icon font`。
-
-### 如何使用
-
-使用 `class="icon"` 来声明图标，具体图标的名称请 `copy` 相应的标签
-
+<demo-block>
+::: slot source
 <div class="demo-block">
   <i class="m-icon-close fs-24"></i>
   <i class="m-icon-link fs-24"></i>
   <i class="m-icon-tag fs-24"></i>
   <i class="m-icon-smile fs-24"></i>
 </div>
+:::
 
-::: demo
-
+::: slot highlight
 ```html
 <i class="m-icon-close fs-24"></i>
 <i class="m-icon-link fs-24"></i>
 <i class="m-icon-tag fs-24"></i>
 <i class="m-icon-smile fs-24"></i>
 ```
-
 :::
+</demo-block>
 
 ### 图标示例
 

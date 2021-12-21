@@ -1,11 +1,7 @@
-import MButton from './button/index'
-import MRow from './row/index'
-import MCol from './col/index'
 import MTag from './tag/index'
 import MShowMore from './show-more/index'
 import MLimitTextArea from './limit-textarea/index'
 import MetaInfo from './meta-info/index'
-import MAlert from './alert/index'
 import MLoadingBar from './loading-bar/index'
 import Skeleton from './skeleton/index'
 import McTable, { McTableTsx } from './mc-table/index'
@@ -24,13 +20,9 @@ import McQueryShrink from './mc-query-shrink/index'
 import tableScrollTop from '../utils/tableScrollTop'
 
 const components = {
-  MButton,
-  MRow,
-  MCol,
   MTag,
   MShowMore,
   MLimitTextArea,
-  MAlert,
   Skeleton,
   McTable,
   McTableTsx,

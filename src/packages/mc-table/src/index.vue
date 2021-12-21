@@ -61,22 +61,22 @@ export default {
       default: () => []
     }
   },
-  data() {
+  data () {
     return {}
   },
   timeoutKey: null,
-  mounted() {
+  mounted () {
     // 每次页面尺寸变化时刷新一下表格布局
     window.addEventListener('resize', this.resizeHandle, false)
   },
-  beforeDestroy() {
+  beforeDestroy () {
     window.removeEventListener('resize', this.resizeHandle, false)
   },
   methods: {
-    getElTableRef() {
+    getElTableRef () {
       return this.$refs.table
     },
-    resizeHandle() {
+    resizeHandle () {
       if (this.timeoutKey) {
         clearTimeout(this.timeoutKey)
       }

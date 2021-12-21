@@ -1,0 +1,12 @@
+.m__show-more {
+  font-size: 13px;
+  color: #000;
+}
+.m__show-more--href,
+.m__show-more--link {
+  color: #3faaf5;
+  cursor: pointer;
+}
+.m__show-more--link {
+  text-decoration: none;
+}

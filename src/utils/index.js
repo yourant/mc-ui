@@ -1,4 +1,4 @@
-var ToString = Object.prototype.toString
+const ToString = Object.prototype.toString
 // 检测是否是当前的数据类型
 export function isType (data, type) {
   // 转小写
@@ -19,10 +19,10 @@ export function isType (data, type) {
 }
 // 防抖
 export function debounce (fn, delay) {
-  var timer
+  let timer
   return function () {
-    var context = this
-    var args = arguments
+    const context = this
+    const args = arguments
     clearTimeout(timer)
     timer = setTimeout(function () {
       fn.apply(context, args)
@@ -31,11 +31,11 @@ export function debounce (fn, delay) {
 }
 // 节流
 export function throttle (fn, wait) {
-  var pre = Date.now()
+  let pre = Date.now()
   return function () {
-    var context = this
-    var args = arguments
-    var now = Date.now()
+    const context = this
+    const args = arguments
+    const now = Date.now()
     if (now - pre >= wait) {
       fn.apply(context, args)
       pre = Date.now()

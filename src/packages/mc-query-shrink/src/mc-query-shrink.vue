@@ -42,7 +42,7 @@
           <i :class="{'el-icon-arrow-down': searchCollapse, 'el-icon-arrow-up': !searchCollapse}" />
         </div>
       </el-form-item>
-      
+
   </el-form>
 </template>
 
@@ -63,12 +63,12 @@ export default {
       type: Boolean,
       default: true
     },
-       // 搜索条件label的文字宽度
+    // 搜索条件label的文字宽度
     labelWidth: {
       type: String,
       default: '145px'
     },
-     // 表单对象
+    // 表单对象
     model: {
       type: Object,
       default: () => {
@@ -100,9 +100,9 @@ export default {
         if (boxContent) {
           const dom = boxContent.querySelector('.el-form-item')
           if (dom) {
-            let elementMb = getComputedStyle(dom, null).marginBottom || '0px'// 每个输入框的下边距
-            let elementHeight = dom.getBoundingClientRect().height || 0// 获取搜索整体高度
-            let elementMbNum = +elementMb.substring(0, elementMb.length - 2) // 去掉px
+            const elementMb = getComputedStyle(dom, null).marginBottom || '0px'// 每个输入框的下边距
+            const elementHeight = dom.getBoundingClientRect().height || 0// 获取搜索整体高度
+            const elementMbNum = +elementMb.substring(0, elementMb.length - 2) // 去掉px
             this.showCollapseBtn = boxContent.getBoundingClientRect().height > elementMbNum + elementHeight
           }
         }

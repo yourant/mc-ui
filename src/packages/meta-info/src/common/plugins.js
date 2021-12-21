@@ -1,8 +1,8 @@
 
 import updateMetaInfo from '../metaOperate/updateMetaInfo'
-import {VUE_META_KEY_NAME} from './constants'
+import { VUE_META_KEY_NAME } from './constants'
 
-let VueMetaInfo = () => {
+const VueMetaInfo = () => {
 }
 
 VueMetaInfo.install = function (Vue) {
@@ -10,7 +10,7 @@ VueMetaInfo.install = function (Vue) {
     beforeCreate () {
       // 如果组件内设置了 vueMeta 信息
       if (this.$options[VUE_META_KEY_NAME] !== undefined) {
-        let type = typeof this.$options[VUE_META_KEY_NAME]
+        const type = typeof this.$options[VUE_META_KEY_NAME]
         // 区分是否存在 vueMeta 信息
         this._hasMetaInfo = true
         // 判断组件内是否存在 computed 对象

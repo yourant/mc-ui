@@ -8,25 +8,25 @@
 </template>
 
 <script>
-  export default{
-    name: 'MTag',
-    props: {
-      closable: Boolean,
-      color: {
-        type: String,
-        default: 'primary'
-      }
-    },
-    data () {
-      return {
-        isclosed: false
-      }
-    },
-    methods: {
-      hiddenTag () {
-        this.isclosed = true
-        this.$emit('close')
-      }
+export default {
+  name: 'MTag',
+  props: {
+    closable: Boolean,
+    color: {
+      type: String,
+      default: 'primary'
+    }
+  },
+  data () {
+    return {
+      isclosed: false
+    }
+  },
+  methods: {
+    hiddenTag () {
+      this.isclosed = true
+      this.$emit('close')
     }
   }
+}
 </script>

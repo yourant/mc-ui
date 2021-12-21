@@ -57,7 +57,7 @@
         <slot name="upload"/>
          </div>
     </draggable>
-    
+
 </template>
 <script>
 import draggable from 'vuedraggable'
@@ -101,7 +101,7 @@ export default {
   mounted () {
     if (this.imageList && this.imageList.length > 0) {
       this.imageListNew = this.imageList
-      let showImgList = []
+      const showImgList = []
       this.imageList.map((val) => {
         showImgList.push(val.url)
       })

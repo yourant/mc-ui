@@ -186,7 +186,7 @@ export default {
     }
   },
   render () {
-    return (<div class="mc-img-preview" style={{display: this.show ? 'flex' : 'none'}}>
+    return (<div class="mc-img-preview" style={{ display: this.show ? 'flex' : 'none' }}>
       {this.images.length <= 1 && <i class="mc-img-preview_close el-icon-close" onClick={this.hideHandle}/>}
       <div class="mc-img-preview_container" onClick={this.hideHandle}>
         <img

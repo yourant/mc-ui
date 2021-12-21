@@ -77,11 +77,11 @@ const compress = {
       const blobImg = compress.dataURItoBlob(ndata)
       if (blobImg.size / 1024 / 1024 < compress.limit) {
         // 压缩到4兆以内
-        console.log('压缩前：' + initSize)
-        console.log('压缩后：' + ndata.length)
-        console.log(
-          '压缩率：' + ~~((100 * (initSize - ndata.length)) / initSize) + '%'
-        )
+        // console.log('压缩前：' + initSize)
+        // console.log('压缩后：' + ndata.length)
+        // console.log(
+        //   '压缩率：' + ~~((100 * (initSize - ndata.length)) / initSize) + '%'
+        // )
         tCanvas.width = tCanvas.height = canvas.width = canvas.height = 0
         return ndata
       }

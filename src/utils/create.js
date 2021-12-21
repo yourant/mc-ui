@@ -1,12 +1,12 @@
 import Vue from 'vue'
 
 export default function create (Component, props, children) {
-  var target = props.target || 'body'
-  var Parent = document.querySelector(target)
+  const target = props.target || 'body'
+  const Parent = document.querySelector(target)
   if (Parent) {
     delete props.target
 
-    var vm = new Vue({
+    const vm = new Vue({
       render: function (h) {
         // return h(Component, { props: props }, children)
         return h(Component, props, children)
@@ -20,7 +20,7 @@ export default function create (Component, props, children) {
     Parent.appendChild(vm.$el)
 
     // 返回组件实例
-    var comp = vm.$children[0]
+    const comp = vm.$children[0]
 
     // 销毁方法
     comp.remove = function () {
