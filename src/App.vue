@@ -1,17 +1,9 @@
 <template>
   <div id="app">
-    <!-- <zf-button>默认按钮</zf-button>
-    <zf-button type="primary">默认按钮</zf-button>
-    <zf-button type="info">默认按钮</zf-button>
-    <zf-button type="success">默认按钮11</zf-button>
-    <zf-button type="warning">默认按钮</zf-button>
-    <zf-button type="danger">默认按钮22</zf-button>
-    <zf-icon icon="edit"></zf-icon>
-    <zf-icon icon="sousuo"></zf-icon>
-    <zf-button type="success" icon="sousuo" icon-position="left">搜索</zf-button>
-    <zf-button type="success" icon="sousuo" icon-position="right">搜索</zf-button>
-    <zf-button type="success" loading>加载中</zf-button> -->
-    <mc-nested-table
+    <mc-svg-icon icon="dashboard"></mc-svg-icon>
+    <i class="m-icon-close fs-24"></i>
+    <m-tag color="danger">标签五</m-tag>
+    <!-- <mc-nested-table
       ref="mctable"
       :titles="titles"
       :data="datas"
@@ -20,7 +12,7 @@
       lazy
       :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
       :load="loadFetch"
-    />
+    /> -->
   </div>
 </template>
 
@@ -154,8 +146,8 @@ export default Vue.extend({
     }
   },
   mounted () {
-    console.log(this.$refs.mctable.$refs.childTable)
-    console.log(this.$refs.mctable.$refs.mcTreeTable)
+    // console.log(this.$refs.mctable.$refs.childTable)
+    // console.log(this.$refs.mctable.$refs.mcTreeTable)
   },
   methods: {
     async sleep (n) {
@@ -167,7 +159,8 @@ export default Vue.extend({
       // 获取下一个层级的数据
       await this.sleep(1000)
       const Idx = Math.floor(Math.random() * 4 + 1)
-      const Names = ['',
+      const Names = [
+        '',
         'HAHA(手套)',
         'WAWA(哇哇)',
         'YAYA(吖吖)',
@@ -192,7 +185,8 @@ export default Vue.extend({
       // 获取下一个层级的数据
       await this.sleep(1000)
       const Idx = Math.floor(Math.random() * 4 + 1)
-      const Names = ['',
+      const Names = [
+        '',
         'HAHA(手套)',
         'WAWA(哇哇)',
         'YAYA(吖吖)',

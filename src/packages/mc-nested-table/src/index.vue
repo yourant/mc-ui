@@ -1,5 +1,5 @@
 <script>
-import { throttle, debounce, isType } from '../../../utils'
+import { throttle, debounce, isType } from '@/utils'
 export default {
   name: 'McNestedTable',
   props: {
