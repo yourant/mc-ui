@@ -25,34 +25,19 @@ export default Vue.extend({
       titles: [
         {
           label: '分类名称',
-          children: [
-            {
-              label: '分类001',
-              children: [
-                {
-                  label: '分类123',
-                  minWidth: '200px',
-                  prop: 'name',
-                  align: 'left'
-                }
-              ]
-            }
-          ]
+          minWidth: '200px',
+          prop: 'name',
+          align: 'left'
         },
         {
           label: '日期',
           children: [
             {
               label: '2021.2',
-              children: [
-                { label: '11点30', minWidth: '300px', prop: '2021.2' }
-              ]
+              minWidth: '300px',
+              prop: '2021.2'
             }
           ]
-        },
-        {
-          label: '类型1',
-          children: [{ label: '比例', minWidth: '300px', prop: '2021.5' }]
         },
         {
           label: '颜色',
@@ -67,40 +52,15 @@ export default Vue.extend({
           id: 1,
           name: 'Women(女性)',
           mergeCell: true,
-          2021.2: {
-            a: '9.9999992568987%',
-            b: '1.2%',
-            c: '8.2%',
-            id: 111,
-            props: ['a', 'b', 'c']
-          },
-          2021.5: {
-            a: '4.2%',
-            b: '1.8%',
-            c: '7.5%',
-            id: 112,
-            props: ['a', 'b', 'c']
-          },
-          2021.8: {
-            a: '5.2%',
-            b: '1.9%',
-            c: '7.7%',
-            id: 113,
-            props: ['a', 'b', 'c']
-          }
+          2021.2: 'wolll',
+
+          2021.8: 55
         },
         {
           id: 3,
           name: 'Dresses(连衣裙)',
           mergeCell: true,
-          2021.2: {
-            a: 'hjk',
-            b: '复色：2%',
-            c: '新品：2.3%',
-            id: 251,
-            props: ['a', 'b', 'c']
-          },
-          2021.5: 896,
+          2021.2: 'xxx',
           2021.8: 785
         },
         {
@@ -115,20 +75,7 @@ export default Vue.extend({
             id: 51,
             props: ['a', 'b', 'c']
           },
-          2021.5: {
-            a: '总：29%',
-            b: '复色：2%',
-            c: '新品：2.1%',
-            id: 52,
-            props: ['a', 'b', 'c']
-          },
-          2021.8: {
-            a: '总：2.3%',
-            b: '复色：2%',
-            c: '新品：2.3%',
-            id: 53,
-            props: ['a', 'b', 'c']
-          }
+          2021.8: 85222
         }
       ],
       datas2: [

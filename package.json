@@ -12,6 +12,7 @@
     "doc": "vuepress dev docs",
     "build:doc": "vuepress build docs"
   },
+  "main": "./dist/mc-ui.umd.min.js",
   "dependencies": {
     "async-validator": "^1.11.5",
     "copy-to-clipboard": "^3.3.1",
@@ -41,7 +42,15 @@
     "sass-loader": "^8.0.2",
     "svg-sprite-loader": "^6.0.11",
     "vue-template-compiler": "^2.6.11",
-    "vuepress": "^1.8.2"
+    "vuepress": "^1.8.2",
+    "karma": "^5.0.1",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-mocha": "^2.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^4.0.2",
+    "mocha": "^7.1.1"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
