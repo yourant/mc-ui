@@ -24,8 +24,10 @@ export default {
   }
 }
 </script>
-<div class="demo-block">
-  <div style="width:300px;">
+
+<demo-block>
+::: slot source
+ <div style="width:300px;">
     <mc-date-range-picker
       :start-time="startTime || ''"
       :end-time="endTime || ''"
@@ -33,10 +35,9 @@ export default {
       @endTimeChange="val => endTime = val"
     />
   </div>
-</div>
+:::
 
-:::demo
-
+::: slot highlight
 ```html
 <script>
 export default {
@@ -57,8 +58,9 @@ export default {
   />
 </div>
 ```
-
 :::
+</demo-block>
+
 
 需要注意的是，由于vue不支持两个的的v-modal修改，所以必须要手动进行值的修改，也就是通过`startTimeChange`和`endTimeChange`去处理值的修改。
 

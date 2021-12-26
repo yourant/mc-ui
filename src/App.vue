@@ -2,8 +2,7 @@
   <div id="app">
     <mc-svg-icon icon="dashboard"></mc-svg-icon>
     <i class="m-icon-close fs-24"></i>
-    <m-tag color="danger">标签五</m-tag>
-    <!-- <mc-nested-table
+    <mc-nested-table
       ref="mctable"
       :titles="titles"
       :data="datas"
@@ -12,7 +11,7 @@
       lazy
       :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
       :load="loadFetch"
-    /> -->
+    />
   </div>
 </template>
 
@@ -146,8 +145,8 @@ export default Vue.extend({
     }
   },
   mounted () {
-    // console.log(this.$refs.mctable.$refs.childTable)
-    // console.log(this.$refs.mctable.$refs.mcTreeTable)
+    console.log(this.$refs.mctable.$refs.childTable)
+    console.log(this.$refs.mctable.$refs.mcTreeTable)
   },
   methods: {
     async sleep (n) {

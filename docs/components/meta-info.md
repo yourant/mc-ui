@@ -11,12 +11,12 @@
 
 ### 常规用法
 
-<div class="demo-block">
-  <p>打开控制台，看看这个页面的 title, meta, 和 link 哦，是不是发生了变化</p>
-</div>
+<demo-block>
+::: slot source
+<p>打开控制台，看看这个页面的 title, meta, 和 link 哦，是不是发生了变化</p>
+:::
 
-::: demo
-
+::: slot highlight
 ```js
 export default {
   metaInfo: {
@@ -36,17 +36,17 @@ export default {
   },
 };
 ```
-
 :::
+</demo-block>
 
 ### async 异步加载
 
-<div class="demo-block">
-  <p>如果你的title或者meta或者link是异步加载的，那么你可能需要这样使用</p>
-</div>
+<demo-block>
+::: slot source
+<p>如果你的title或者meta或者link是异步加载的，那么你可能需要这样使用</p>
+:::
 
-::: demo
-
+::: slot highlight
 ```js
 export default {
   name: "async",
@@ -67,8 +67,8 @@ export default {
   },
 };
 ```
-
 :::
+</demo-block>
 
 <script>
   export default {

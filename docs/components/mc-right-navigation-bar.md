@@ -57,7 +57,10 @@
 </script>
 
 ## 默认用法 效果看右下角
-<style scoped>
+
+<demo-block>
+::: slot source
+ <style scoped>
 .slot-content {
   position: absolute;
   top: 0;
@@ -83,9 +86,9 @@
     </template>
   </mc-right-navigation-bar>
 </div>
+:::
 
-:::demo
-
+::: slot highlight
 ```html
 <script>
   export default {
@@ -166,6 +169,7 @@
 ```
 
 :::
+</demo-block>
 
 ### Attributes
 | 参数     | 说明                         | 类型    | 可选值                              | 默认值 |

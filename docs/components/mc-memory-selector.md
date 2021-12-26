@@ -20,17 +20,18 @@ export default {
   }
 }
 </script>
-<div class="demo-block">
+
+<demo-block>
+::: slot source
   <mc-memory-selector
     v-model="trackingOrderUser"
     clearable
     placeholder="请输入跟单人员"
     storage-key="trackingOrderUsers"
   />
-</div>
+:::
 
-:::demo
-
+::: slot highlight
 ```html
 <script>
 export default {
@@ -50,23 +51,23 @@ export default {
   />
 </div>
 ```
-
 :::
+</demo-block>
 
 ### 多选
 
-<div class="demo-block">
-  <mc-memory-selector
+<demo-block>
+::: slot source
+ <mc-memory-selector
     v-model="trackingOrderUsers"
     clearable
     multiple
     placeholder="请输入跟单人员"
     storage-key="trackingOrderUsers"
   />
-</div>
+:::
 
-:::demo
-
+::: slot highlight
 ```html
 <script>
 export default {
@@ -87,8 +88,8 @@ export default {
   />
 </div>
 ```
-
 :::
+</demo-block>
 
 ## 参数
 

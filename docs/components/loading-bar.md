@@ -47,18 +47,19 @@
     }
   }
 </script>
-<div class="demo-block">
-   <m-button @click="start">开始</m-button>
-   <m-button @click="end">结束</m-button>
-   <m-button @click="error">错误</m-button>
-</div>
 
-::: demo
+<demo-block>
+::: slot source
+<el-button @click="start">开始</el-button>
+<el-button @click="end">结束</el-button>
+<el-button @click="error">错误</el-button>
+:::
 
+::: slot highlight
 ```html
-<m-button @click="start">开始</m-button>
-<m-button @click="end">结束</m-button>
-<m-button @click="error">错误</m-button>
+<el-button @click="start">开始</el-button>
+<el-button @click="end">结束</el-button>
+<el-button @click="error">错误</el-button>
 <script>
   export default {
     methods: {
@@ -75,27 +76,29 @@
   };
 </script>
 ```
-
 :::
+</demo-block>
+ 
 
 ### 常规配置
 
 提供 LoadingBar 的全局配置，使用方法如下：
 
-<div class="demo-block">
-   <m-button @click="setSpeed">设置speed速度</m-button>
-   <m-button @click="setSpinner">设置spinner动画效果</m-button>
-   <m-button @click="setPercentNum">设置percentNum每次加载的比例</m-button>
-   <m-button @click="setShowSpinner">设置是否显示spinner</m-button>
-</div>
+<demo-block>
+::: slot source
+<el-button @click="setSpeed">设置speed速度</el-button>
+<el-button @click="setSpinner">设置spinner动画效果</el-button>
+<el-button @click="setPercentNum">设置percentNum每次加载的比例</el-button>
+<el-button @click="setShowSpinner">设置是否显示spinner</el-button>
+:::
 
-::: demo
+::: slot highlight
 
 ```html
-<m-button @click="setSpeed">设置speed速度</m-button>
-<m-button @click="setSpinner">设置spinner动画效果</m-button>
-<m-button @click="setPercentNum">设置percentNum每次加载的比例</m-button>
-<m-button @click="setShowSpinner">设置是否显示spinner</m-button>
+<el-button @click="setSpeed">设置speed速度</el-button>
+<el-button @click="setSpinner">设置spinner动画效果</el-button>
+<el-button @click="setPercentNum">设置percentNum每次加载的比例</el-button>
+<el-button @click="setShowSpinner">设置是否显示spinner</el-button>
 <script>
   export default {
     methods: {
@@ -127,8 +130,8 @@
   };
 </script>
 ```
-
 :::
+</demo-block>
 
 ### LoadingBar config 参数
 

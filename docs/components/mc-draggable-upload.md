@@ -28,6 +28,9 @@
         }
     }
 </script>
+
+<demo-block>
+::: slot source
 <div>
     <mc-draggable-upload
      :image-list="imageList"
@@ -56,8 +59,9 @@
      </template>
     </mc-draggable-upload>
 </div>
+:::
 
-:::demo
+::: slot highlight
 
 ```html
 <script>
@@ -110,7 +114,7 @@
 </div>
 ```
 :::
-
+</demo-block>
 ### Attributes
 
 插槽upload里面的组件可以直接放element-ui中的组件el-upload（上面写了个参考示例），除了删除事件和预览，别的直接按照el-upload即可

@@ -1,3 +1,9 @@
+# 前端压缩图片上传
+
+---
+
+上传图片的时候，可能会直接拿手机拍照上传，一般图片会比较大，需要做一个压缩处理，这个时候可以用到这个前端压缩库，结合upload组件实现前端压缩图片上传
+
 <style>
  .avatar-uploader .el-upload {
     border: 1px dashed #d9d9d9;
@@ -24,7 +30,7 @@
   }
 </style>
 <script>
- import compress from "../../utils/compress.js"
+ import compress from "@/utils/compress.js"
  export default {
     data() {
       return {
@@ -55,18 +61,13 @@
   }
 </script>
 
-# 前端压缩图片上传
-
----
-
-上传图片的时候，可能会直接拿手机拍照上传，一般图片会比较大，需要做一个压缩处理，这个时候可以用到这个前端压缩库，结合upload组件实现前端压缩图片上传
-
 ### 基本用法
 
 在编写el-upload组件的时候，引入compress.js 库，在beforeupoad的回调函数的中配置下面的代码
 
-<div class="demo-block">
-<el-upload
+<demo-block>
+::: slot source
+ <el-upload
   ref="elUpload"
   class="avatar-uploader"
   action="https://jsonplaceholder.typicode.com/posts/"
@@ -76,10 +77,9 @@
   <img v-if="imageUrl" :src="imageUrl" class="avatar">
   <i v-else class="el-icon-plus avatar-uploader-icon"></i>
 </el-upload>
-</div>
+:::
 
-::: demo
-
+::: slot highlight
 ```html
 <el-upload
   ref="elUpload"
@@ -129,5 +129,6 @@
   }
 </script>
 ```
-
 :::
+</demo-block>
+ 

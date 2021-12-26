@@ -1,6 +1,11 @@
-<style>
+# McQueryShrink 搜索条件表单
 
-</style>
+若对该组件有问题请咨询 <span style="color:#1890ff;">@幽草</span>
+
+---
+
+对搜索区域，进行展开收起操作
+
 <script>
  export default {
    data() {
@@ -26,18 +31,13 @@
   }
 </script>
 
-# McQueryShrink 搜索条件表单
-
-若对该组件有问题请咨询 <span style="color:#1890ff;">@幽草</span>
-
----
-
-对搜索区域，进行展开收起操作
 ### 基本用法
 
 直接用 mc-query-shrink 标签包裹搜索条件，收缩展示第一行，展开展示全部，组件两个事件分别是 reset：重置事件，search：搜索事件
 
-<div class="demo-block">
+<demo-block>
+::: slot source
+<div>
   <mc-query-shrink @reset="reset" @search="search" :model="formData" label-width="40px">
         <el-form-item label="姓名" prop="name">
             <el-input v-model="formData.name" placeholder="请输入姓名" clearable></el-input>
@@ -69,8 +69,10 @@
         </template>
   </mc-query-shrink>
 </div>
+:::
 
-::: demo
+
+::: slot highlight
 
 ```html
 <template>
@@ -132,6 +134,7 @@
 ```
 
 :::
+</demo-block>
 
 ### Attributes
 

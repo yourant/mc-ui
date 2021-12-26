@@ -1,4 +1,4 @@
-# mc-ui2
+# mc-ui
 
 ## Project setup
 ```

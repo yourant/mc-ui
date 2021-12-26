@@ -16,6 +16,27 @@ import { tableScrollTop } from '@mc/ui'
 tableScrollTop('table-classname')
 ```
 
+<demo-block>
+::: slot source
+<script>
+  export default {
+    data() {
+      return {
+        tableData: Array.from({ length: 100 }).fill('').map((_, idx) => ({
+          date: '2016-05-02',
+          name: '王小虎',
+          address: `上海市普陀区金沙江路 15${idx} 弄`
+        }))
+      }
+    },
+    methods: {
+      scrollTo() {
+        this.$tableScrollTop('target-table')
+      }
+    }
+  }
+</script>
+
 <div class="demo-block">
   <el-button @click="scrollTo">滚动到顶部</el-button>
   <el-table
@@ -40,27 +61,9 @@ tableScrollTop('table-classname')
     </el-table-column>
   </el-table>
 </div>
-<script>
-  export default {
-    data() {
-      return {
-        tableData: Array.from({ length: 100 }).fill('').map((_, idx) => ({
-          date: '2016-05-02',
-          name: '王小虎',
-          address: `上海市普陀区金沙江路 15${idx} 弄`
-        }))
-      }
-    },
-    methods: {
-      scrollTo() {
-        this.$tableScrollTop('target-table')
-      }
-    }
-  }
-</script>
+:::
 
-:::demo
-
+::: slot highlight
 ```html
 <div class="demo-block">
   <el-button @click="scrollTo">滚动到顶部</el-button>
@@ -107,4 +110,7 @@ tableScrollTop('table-classname')
 ```
 
 :::
+</demo-block>
+
+ 
 

@@ -92,21 +92,24 @@
     }
   }
 </script>
-<div class="demo-block">
-  <mc-table
-    :table-config="tableConfig"
-    :render-data="tableData"
-  >
-    <template v-slot:purchaseOrderNo="scope">
-      <div>采购单号: {{scope.row.purchaseOrderNo}}</div>
-    </template>
-    <template v-slot:operation>
-      <a href="#">操作按钮</a>
-    </template>
-  </mc-table>
-</div>
 
-:::demo
+
+<demo-block>
+::: slot source
+<mc-table
+  :table-config="tableConfig"
+  :render-data="tableData"
+>
+  <template v-slot:purchaseOrderNo="scope">
+    <div>采购单号: {{scope.row.purchaseOrderNo}}</div>
+  </template>
+  <template v-slot:operation>
+    <a href="#">操作按钮</a>
+  </template>
+</mc-table>
+:::
+
+::: slot highlight
 
 ```html
 <script>
@@ -192,11 +195,14 @@
   </mc-table>
 </div>
 ```
-
 :::
+</demo-block>
+
 
 看完实例之后你可能会觉得, 这也没有减少多少代码量啊? 但是在实际使用中, 应该将`tableJson`提取到另外一个js文件中, 最终你的vue组件剩下的内容就没多少了, 如下:
 
+<demo-block>
+::: slot highlight
 ```html
 <script>
   import tableConfig from './tableConfig'
@@ -223,7 +229,8 @@
   </mc-table>
 </div>
 ```
-
+:::
+</demo-block>
 
 ### JSX用法
 
@@ -231,7 +238,9 @@
 
 <div class="demo-block" id="jsx-mark" style="text-align:center;font-size:18px;color:blue;padding:10px 0;">点击查看mc-table-jsx使用方式</div>
 
-:::demo
+<demo-block>
+
+::: slot highlight
 ```js
 // js文件
 // 建议将tableConfig的配置单独提取到一个js文件，避免因配置导致的文件过长。
@@ -352,6 +361,7 @@ export default {
 }
 ```
 :::
+</demo-block>
 
 使用jsx写法能够让页面组件更灵活，组件的拆分能够更加的细粒度，可以将一些组件拆分到方法内。所以强烈建议使用jsx开发。但是需要注意jsx的参数传递和方法绑定跟vue文件组件略有区别。常见使用场景在上面的demo中已经列出，有function绑定，参数传递，插槽使用等。
 
@@ -369,6 +379,10 @@ export default {
 
 我们可以通过调用`mc-table`实例下的`getElTableRef`获取到底层的`el-table`实例, 比如主动全选表单代码如下
 
+
+<demo-block>
+
+::: slot highlight
 ```html
 <script>
   import tableConfig from './tableConfig'
@@ -392,4 +406,5 @@ export default {
   />
 </div>
 ```
-
+:::
+</demo-block>

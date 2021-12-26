@@ -79,8 +79,10 @@ export default {
   }
 }
 </script>
-<div class="demo-block">
-  <div>
+
+<demo-block>
+::: slot source
+ <div>
     <div style="margin-bottom: 10px;"><b>点击图片查看预览</b></div>
     <el-image
       class="example-img"
@@ -98,10 +100,9 @@ export default {
       @click="showSingleImg"
     />
   </div>
-</div>
+:::
 
-:::demo
-
+::: slot highlight
 ```html
 <script>
 export default {
@@ -164,15 +165,19 @@ export default {
   </div>
 </div>
 ```
-
 :::
+</demo-block>
+ 
+
+
 
 ## 列表展示缩略图
 
 如需要在右侧显示缩略图，则在传入数组中放入对象即可，对象中`originUrl`放原图链接，`thumbnailUrl`放缩略图链接。
 
-<div class="demo-block">
-  <div>
+<demo-block>
+::: slot source
+ <div>
     <div style="margin-bottom: 10px;"><b>点击图片查看预览, 右键右侧缩略图在新窗口打开可查看缩略图大小</b></div>
     <el-image
       class="example-img"
@@ -182,9 +187,9 @@ export default {
       @click="showThumbnailImg(index)"
     />
   </div>
-</div>
+:::
 
-:::demo
+::: slot highlight
 
 ```html
 <script>
@@ -227,8 +232,8 @@ export default {
   </div>
 </div>
 ```
-
 :::
+</demo-block>
 
 ## 参数
 

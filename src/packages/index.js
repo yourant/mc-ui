@@ -3,7 +3,6 @@ import MShowMore from './show-more/index'
 import MLimitTextArea from './limit-textarea/index'
 import MetaInfo from './meta-info/index'
 import MLoadingBar from './loading-bar/index'
-import Skeleton from './skeleton/index'
 import McTable, { McTableTsx } from './mc-table/index'
 import McMemorySelector from './mc-memory-selector/index'
 import McDateRangePicker from './mc-date-range-picker/index'
@@ -23,7 +22,6 @@ const components = {
   MTag,
   MShowMore,
   MLimitTextArea,
-  Skeleton,
   McTable,
   McTableTsx,
   McMemorySelector,
@@ -46,7 +44,6 @@ const install = function (Vue) {
   // const requireComponent = require.context('.', true, /index\.vue/)
   // requireComponent.keys().forEach((fileName) => {
   //   const config = requireComponent(fileName)
-  //   console.log(config.default.name, 'wsss')
   //   Vue.component(config.default.name, config.default)
   // })
 

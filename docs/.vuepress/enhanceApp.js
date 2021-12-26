@@ -1,7 +1,7 @@
 // import Vue from 'vue';
 
 import ElementUI from "element-ui";
-// for某些基于element-ui再封装的组件
+// 某些基于element-ui再封装的组件
 import "element-ui/lib/theme-chalk/index.css";
 
 // import hljs from 'highlight.js'

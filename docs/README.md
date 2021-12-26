@@ -9,8 +9,8 @@
 
 home: true
 heroImage: /img/logo.png
-heroText: Hero 标题
-tagline: Hero 副标题
+heroText: MC UI
+tagline: 一款轻量级、模块化的前端 UI 组件库
 actionText: 快速上手 →
 actionLink: /start/
 features:

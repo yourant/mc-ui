@@ -17,16 +17,20 @@ export default {
   }
 }
 </script>
-<div class="demo-block">
-  <mc-multiple-input
+
+
+<demo-block>
+::: slot source
+<div>
+ <mc-multiple-input
     v-model="names"
     placeholder="支持换行符分隔"
     @multipleChange="v => names = v"
   />
 </div>
+:::
 
-:::demo
-
+::: slot highlight
 ```html
 <script>
 export default {
@@ -45,8 +49,8 @@ export default {
   />
 </div>
 ```
-
 :::
+</demo-block>
 
 ## 参数
 

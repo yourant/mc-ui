@@ -7,12 +7,14 @@
 ### 用法
 调用 $create方法传递你要挂载的组件，及组件的props, 返回组件挂载后的实例
 
-<script>
-  import MTag from 'packages/tag/index'
+<demo-block>
+::: slot source
+ <script>
+  import { Tag } from 'element-ui'
   export default{
     methods: {
       createTag() {
-        const comp = this.$create(MTag, {
+        const comp = this.$create(Tag, {
           props: {
             color: 'success'
           },
@@ -28,14 +30,14 @@
   }
 </script>
 <div class="demo-block mc__create__demo">
-   <m-button @click="createTag">挂载一个标签</m-button>
+   <el-button type="primary" @click="createTag">挂载一个标签</el-button>
 </div>
+:::
 
-::: demo
-
+::: slot highlight
 ```html
 <script>
-  import MTag from 'packages/tag/index'
+  import { Tag } from 'element-ui'
   export default{
     methods: {
       createTag() {
@@ -57,13 +59,11 @@
   }
 </script>
 <div class="demo-block mc__create__demo">
-   <m-button @click="createTag">挂载一个标签</m-button>
+   <el-button type="primary" @click="createTag">挂载一个标签</el-button>
 </div>
 ```
-
 :::
-
-
+</demo-block>
 
 ### McCreate 参数
 参考Vue本身[createElement](https://cn.vuejs.org/v2/guide/render-function.html#createElement-%E5%8F%82%E6%95%B0)函数的传参

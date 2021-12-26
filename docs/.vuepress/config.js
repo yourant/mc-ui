@@ -36,39 +36,37 @@ module.exports = {
         title: "视图组件",
         collapsable: false,
         children: [
-          //     "/components/show-more",
-          //     "/components/limit-textarea",
-          //     "/components/meta-info",
-          //     "/components/loading-bar",
-          //     "/components/skeleton",
-          //     "/components/mc-table",
-          //     "/components/mc-img-preview",
+          "/components/show-more",
+          "/components/limit-textarea",
+          "/components/meta-info",
+          "/components/loading-bar",
+          "/components/mc-table",
+          "/components/mc-img-preview",
           "/components/mc-query-form",
           "/components/mc-nested-table",
-          //     "/components/mc-compress",
-          //     "/components/mc-draggable-upload",
-          //     "/components/mc-right-navigation-bar",
-          //     "/components/mc-query-shrink",
+          "/components/mc-compress",
+          "/components/mc-draggable-upload",
+          "/components/mc-right-navigation-bar",
+          "/components/mc-query-shrink",
         ],
       },
-      // {
-      //   title: "表单组件",
-      //   collapsable: false,
-      //   children: [
-      //     "/components/mc-memory-selector",
-      //     "/components/mc-date-range-picker",
-      //     "/components/mc-multiple-input",
-      //   ],
-      // },
-      // {
-      //   title: "工具函数",
-      //   collapsable: false,
-      //   // path: "/tools",
-      //   children: [
-      //     "/components/mc-create",
-      //     "/components/table-scroll-top"
-      //   ]
-      // }
+      {
+        title: "表单组件",
+        collapsable: false,
+        children: [
+          "/components/mc-memory-selector",
+          "/components/mc-date-range-picker",
+          "/components/mc-multiple-input",
+        ],
+      },
+      {
+        title: "工具函数",
+        collapsable: false,
+        children: [
+          "/components/mc-create",
+          "/components/table-scroll-top"
+        ]
+      }
     ],
   },
   // plugins: [

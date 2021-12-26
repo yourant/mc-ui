@@ -6,64 +6,6 @@
 
 Limit 可以控制用户输入的字符数，`placeholder` 指定初始输入的提示文案
 
-<div class="demo-block">
-<m-limit :maxLen="10" placeholder="最多输入10个字符"></m-limit>
-</div>
-
-::: demo
-
-```html
-<m-limit
-  v-mode="content"
-  :max-len="10"
-  placeholder="最多输入10个字符"
-></m-limit>
-```
-
-:::
-
-### 裁剪超出字符
-
-如果超过了限制的字符数，超过部分进行裁剪
-
-<div class="demo-block">
-<m-limit :max-len="10" placeholder="最多输入10个字符" isCut></m-limit>
-</div>
-
-::: demo
-
-```html
-<m-limit
-  v-mode="content"
-  :max-len="10"
-  placeholder="最多输入10个字符"
-  is-cut
-></m-limit>
-```
-
-:::
-
-### 列高
-
-通过 `rows` 属性指定`limit`的高度
-
-<div class="demo-block">
-<m-limit :max-len="10" :rows="3" placeholder="最多输入10个字符" is-cut></m-limit>
-</div>
-
-:::demo
-
-```html
-<m-limit
-  :max-len="10"
-  :rows="3"
-  placeholder="最多输入10个字符"
-  is-cut
-></m-limit>
-```
-
-:::
-
 <script>
 export default {
   data() {
@@ -73,6 +15,66 @@ export default {
   }
 }
 </script>
+
+<demo-block>
+::: slot source
+<m-limit :maxLen="10" placeholder="最多输入10个字符"></m-limit>
+:::
+
+::: slot highlight
+```html
+<m-limit
+  v-mode="content"
+  :max-len="10"
+  placeholder="最多输入10个字符"
+></m-limit>
+```
+:::
+</demo-block>
+
+
+### 裁剪超出字符
+
+如果超过了限制的字符数，超过部分进行裁剪
+
+<demo-block>
+::: slot source
+<m-limit :max-len="10" placeholder="最多输入10个字符" isCut></m-limit>
+:::
+
+::: slot highlight
+```html
+<m-limit
+  v-mode="content"
+  :max-len="10"
+  placeholder="最多输入10个字符"
+  is-cut
+></m-limit>
+```
+:::
+</demo-block>
+ 
+
+### 列高
+
+通过 `rows` 属性指定`limit`的高度
+
+<demo-block>
+::: slot source
+<m-limit :max-len="10" :rows="3" placeholder="最多输入10个字符" is-cut></m-limit>
+:::
+
+::: slot highlight
+```html
+<m-limit
+  :max-len="10"
+  :rows="3"
+  placeholder="最多输入10个字符"
+  is-cut
+></m-limit>
+```
+:::
+</demo-block>
 
 ## API
 
