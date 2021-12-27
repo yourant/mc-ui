@@ -52,7 +52,7 @@ async function publish () {
   try {
     // 查看本地工作目录是否干净
     diffLocal()
-    await setVersion()
+    // await setVersion()
     bar.tick()
     const { message } = await inquirer.prompt([{
       name: 'message',
@@ -115,6 +115,7 @@ function diffLocal () {
 /**
  * 版本同步
  */
+// eslint-disable-next-line no-unused-vars
 async function setVersion () {
   const outPackage = require('../package.json')
   const innerPackage = require('../packages/package.json')
