@@ -1,0 +1,15 @@
+build/
+src/
+public/
+docs/
+tests/
+
+vue.config.js
+babel.config.js
+karma.conf.js
+*.map
+
+.browserslistrc
+.editorconfig
+.eslintignore
+.eslintrc.js

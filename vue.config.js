@@ -4,7 +4,7 @@
 //   return path.join(__dirname, dir)
 // }
 
-const getCommonConfig = require('./common.config')
+const getCommonConfig = require('./build/webpack.common.config')
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 module.exports = {

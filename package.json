@@ -1,7 +1,7 @@
 {
-  "name": "mc-ui",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@mc/ui-test1",
+  "version": "1.1.55",
+  "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -10,9 +10,13 @@
     "test": "karma start",
     "lib": "vue-cli-service build --target lib --name mc-ui  ./src/packages/index.js",
     "doc": "vuepress dev docs",
-    "build:doc": "vuepress build docs"
+    "build:doc": "vuepress build docs",
+    "pub": "node build/publish.js"
   },
   "main": "./dist/mc-ui.umd.min.js",
+  "publishConfig": {
+    "registry": "https://bl-nexus.digi800.com/repository/bnpm-hosted/"
+  },
   "dependencies": {
     "async-validator": "^1.11.5",
     "copy-to-clipboard": "^3.3.1",
@@ -31,18 +35,14 @@
     "@vuepress/utils": "^2.0.0-alpha.1",
     "babel-eslint": "^10.1.0",
     "chai": "^4.1.2",
+    "chalk": "^4.1.2",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
-    "lint-staged": "^9.5.0",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "svg-sprite-loader": "^6.0.11",
-    "vue-template-compiler": "^2.6.11",
-    "vuepress": "^1.8.2",
+    "inquirer": "^8.2.0",
     "karma": "^5.0.1",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.1.0",
@@ -50,7 +50,17 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.32",
     "karma-webpack": "^4.0.2",
-    "mocha": "^7.1.1"
+    "lint-staged": "^9.5.0",
+    "mocha": "^7.1.1",
+    "path": "^0.12.7",
+    "progress": "^2.0.3",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "shelljs": "^0.8.4",
+    "svg-sprite-loader": "^6.0.11",
+    "version-compare": "^1.4.0",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.8.2"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

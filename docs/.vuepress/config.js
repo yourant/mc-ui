@@ -5,7 +5,7 @@
 
 //   return path.join(__dirname, '../../', dir);
 // }
-const getCommonConfig = require("../../common.config");
+const getCommonConfig = require("../../build/webpack.common.config");
 
 module.exports = {
   title: "mc-ui", // 设置网站标题
